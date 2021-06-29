@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Clock Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./appearance/images/icons/br-icon.png" type="image/png" sizes="32x32">
+    <link rel="stylesheet" href="./appearance/css/mainPage.css">
+</head>
+
+<body id="ext-clock-angDASDdas4das4d8">
+    <div class="bgDiv"></div>
+    <div class="mainDiv">
+
+        <div>
+            <img src="./appearance/images/icons/search.png" class="search-icon" id="search">
+        </div>
+        <div class="greetings-div">
+            <h1><span class="wav-hand">&#128075;</span>
+                <span class="wel-text">NICE TO SEE YOU</span>
+                <span class="wav-hand">&#128075;</span>
+            </h1>
+
+            <label class="gender-tag fancy-div"></label>
+            <label class="name-tag fancy-div"></label>
+        </div>
+
+        <div class="clock-class">
+            <div class="digital-clock">
+                <div id="hr-div" class="white-color-div"></div><sub>hh</sub><span class="colon-class"> : </span>
+                <div id="min-div" class="white-color-div"></div><sub>mm</sub><span class="colon-class"> : </span>
+                <div id="sec-div" class="white-color-div"></div><sub>ss</sub>
+            </div>
+
+            <div class="outside-analog">
+                <div class="analog-clock">
+                    <div class="clock-center"></div>
+                    <div class="hr-hand"></div>
+                    <div class="min-hand"></div>
+                    <div class="sec-hand"></div>
+                </div>
+            </div>
+        </div>
+        <div class="day-date-ext"></div>
+    </div>
+
+    <a id="bing-uri-id" href="https://www.bing.com" target="_blank" noreferrer="">Bing's Today Image </a>
+    <img class="settings-icon" src="./appearance/images/icons/settings.png">
+
+    <div id="pop-up-settings">
+        <div class="clock-type inner-div-sett">
+            <h3 class="h3-popup"> &#x23f0; Clock </h3>
+            <span class="select-span clock-select analog"> Analog Clock </span>
+            <span class="select-span clock-select digital"> Digital Clock </span>
+        </div>
+
+        <div class="ext-notes-div inner-div-sett">
+            <h3 class="h3-popup"> &#9997; Note </h3>
+            <span class="select-span notes-select notes"> New Note </span>
+            <span class="select-span quick-click">	&#x1f446; Quick Click </span>
+            <span class="select-span align-all"> &#x2630; Align All </span>
+            <span class="select-span all-del"> &#128465; Delete All </span>
+        </div>
+
+        <div class="ext-notes-div inner-div-sett">
+            <h3 class="h3-popup"> Background </h3>
+            <input id="main-ext-bg" class="bg-file-select" type="file" accept="image/*" title="Select image to set for background">
+            <span class="select-span delete-background"> &#128465; Delete </span>
+            <span class="opac-span"><label> Background Opacity</label>
+                <input id="main-ext-opac" class="bg-opac-select" type="range" min="0" max="10" step="1">
+            </span>
+        </div>
+
+    </div>
+
+    <div id="info-div">
+        <label class="main-label">Display Name</label>
+        <input type="text" id="welcome-name">
+
+        <label class="main-label">Genders</label>
+        <input type="radio" name="gender" value="male"> <label class="gen-tag">Male</label>
+        <input type="radio" value="female" name="gender"> <label class="gen-tag">Female</label>
+
+        <button class="save-btn"> Save Info </button>
+    </div>
+
+
+    <div class="hanging-div">
+        <img src="./appearance/images/icons/mini.png" class="hanging-icon" id="mini" style="top: 5px; left: 5px;">
+        <table class="location-div">
+            <tr>
+                <td id="country-name" colspan="2"></td>
+            </tr>
+            <tr>
+                <td>Latitude : </td>
+                <td id="lat-id"> </td>
+            </tr>
+            <tr>
+                <td>Longitude : </td>
+                <td id="long-id"> </td>
+            </tr>
+        </table>
+        <span class="off-message"> Ah Dang! <br> Are you offline ? <br> &#128542 <br> OR <br> What about location settings ? <br> &#128550; </span>
+        <iframe class="map-div"></iframe>
+        <img src="./appearance/images/icons/open-new.png" class="new-tab-png"> 
+    </div>
+
+    <img src="./appearance/images/icons/maxi.png" class="hanging-icon" id="maxi">
+
+    <form action="https://google.com/search" method="get" id="search-form">
+        <!-- <input type="hidden" name="sitesearch" value="http://acme.com" /> -->
+        <input type="text" name="q" class="google-search-input" placeholder="Search by Google" tabindex="0"/>
+        <img class="search-close" src="./appearance/images/icons/close.png"></img>
+    </form>
+
+    <div id="notes-main-div" class="same-notes-div"></div>
+
+    <img class="list-quick-clicks" src="./appearance/images/icons/quick.png" title="No Quick Links are configured on your browser.">
+    <div class="list-qk-links">
+        <div class="icons-div-qk">
+        </div>
+    </div>
+    <div class="quick-click-ext">
+        <label class="qk-label">Select Icon Image : </label>
+        <input id="quick-icon" type="file" accept="image/*"><br>
+        <label class="qk-label">URI : </label>
+        <input id="quick-link" type="url" placeholder="Enter the URI" title="Enter Valid URI">
+        <button id="quick-button">Save</button>
+    </div>
+    <div id="overlaid-div"></div>
+</body>
+
+<script src="./scripts/stickyNotes.js" type="text/javascript"></script>
+<script src="./scripts/allScripts.js" type="text/javascript"></script>
+
+</html>
